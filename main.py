@@ -21,6 +21,10 @@ def displayRegisterPage():
     else:
         pass
 
+@app.route("/create_recipe", methods=["POST"])
+def createRecipe():
+    
+
 
 
 
