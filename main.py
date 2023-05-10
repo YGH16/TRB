@@ -67,7 +67,16 @@ def displayRegisterPage():
 def createRecipe():
     if session["username"] and session['logged_in']:
         recipe_name = request.form.get('name')
-        
+        time_taken = request.form.get('time_taken')
+        recipe_body = request.form.get('recipe_body')
+
+        recipe_list = database['recipes']
+        recipe = {"name":recipe_name, "time_taken": time_taken, "body": recipe_body}
+
+        recipe_list.insert_one(recipe)
+    
+    return "hello"
+
 
 
 
