@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'fUjXn2r5u8x!A%D*G-KaPdSgVkYp3s6v'
 ca = certifi.where()
 
-client = MongoClient('mongodb+srv://TRP:ZivIortmj3k8olHW@cluster0.uw2qkum.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=ca)
+client = MongoClient(, tlsCAFile=ca)
 
 try:
     client.admin.command('ping')
